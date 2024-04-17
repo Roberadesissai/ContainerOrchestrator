@@ -123,6 +123,85 @@ Apply the deployment to your Kubernetes cluster:
 kubectl apply -f deployment.yaml
 ```
 
+Here's a list of commonly used Docker commands along with comments explaining their purpose:
+
+1. **`docker build`** - Build an image from a Dockerfile.
+   ```bash
+   docker build -t my-image-name .
+   ```
+   - `-t` tags the image with a name for easier reference.
+   - `.` specifies the context (usually the path to the Dockerfile and related files).
+
+2. **`docker run`** - Run a container from an image.
+   ```bash
+   docker run -p 4000:80 my-image-name
+   ```
+   - `-p` maps a port on the host to a port in the container (host:container).
+   - `my-image-name` is the name of the image to create the container from.
+
+3. **`docker ps`** - List running containers.
+   ```bash
+   docker ps
+   ```
+   - Shows all containers that are currently running. Use the `-a` flag to show all containers (including stopped ones).
+
+4. **`docker stop`** - Stop a running container.
+   ```bash
+   docker stop container_id
+   ```
+   - `container_id` can be the full container ID or just the first few characters.
+
+5. **`docker rm`** - Remove one or more containers.
+   ```bash
+   docker rm container_id
+   ```
+   - Removes the specified container. Containers must be stopped before they can be removed unless you use the `-f` (force) flag.
+
+6. **`docker images`** - List all images.
+   ```bash
+   docker images
+   ```
+   - Shows all Docker images stored locally.
+
+7. **`docker rmi`** - Remove one or more images.
+   ```bash
+   docker rmi image_name
+   ```
+   - Removes the specified image. The image must not be used by any running containers.
+
+8. **`docker logs`** - Fetch the logs of a container.
+   ```bash
+   docker logs container_id
+   ```
+   - Useful for debugging and checking the output from a running or stopped container.
+
+9. **`docker exec`** - Execute a command inside a running container.
+   ```bash
+   docker exec -it container_id bash
+   ```
+   - `-it` allows interactive processes (i.e., attach a terminal).
+   - This example starts a bash shell inside the container.
+
+10. **`docker pull`** - Pull an image or a repository from a registry.
+    ```bash
+    docker pull ubuntu
+    ```
+    - Downloads the latest Ubuntu image from Docker Hub.
+
+11. **`docker push`** - Push an image or a repository to a registry.
+    ```bash
+    docker push my-image-name
+    ```
+    - Uploads your custom image to Docker Hub or another specified registry.
+
+12. **`docker network create`** - Create a network.
+    ```bash
+    docker network create my-net
+    ```
+    - Useful for connecting multiple containers so they can communicate.
+
+These commands form the foundation of most interactions with Docker, covering the building, running, and management of containers and images.
+
 ## 🤝 How to Contribute 🤝
 
 We cherish contributions from the community. Here’s how you can contribute:
