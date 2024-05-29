@@ -1,0 +1,15 @@
+{
+  "name": "docker102tutorial",
+  "version": "1.0.0",
+  "description": "A simple Docker tutorial Node.js app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
